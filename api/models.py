@@ -16,3 +16,5 @@ class Transaction(models.Model):
     coke = models.IntegerField(default=0)
     pepsi = models.IntegerField(default=0)
     soda = models.IntegerField(default=0)
+
+    timestamp = models.DateTimeField(auto_now_add=True)

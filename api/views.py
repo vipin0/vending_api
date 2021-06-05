@@ -25,8 +25,8 @@ def getjson(data):
                 'billed':data['total']-data['balance'],
                 'balance':data['balance']
             }
-        }
-
+        },
+        'timestamp': data['timestamp']
     }
     return data
 @api_view(['POST'])
