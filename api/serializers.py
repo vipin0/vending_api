@@ -15,6 +15,24 @@ class TransactionSerializer(serializers.ModelSerializer):
     soda = serializers.IntegerField(min_value=0)
     class Meta:
         model = Transaction
+        fields = [
+                #   'id',
+                  'penny',
+                  'nickel',
+                  'dime',
+                  'quarter',
+                  'coke',
+                  'pepsi',
+                  'soda']
+        #           'total',
+        #           'billed_amount',
+        #           'balance',
+        #           'timestamp']
+        # read_only_fields = ['id','total','billed_amount','balance','timestamp']
+
+class TransactionDisplaySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
         fields = ['id',
                   'penny',
                   'nickel',
